@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body,html{
+    height: 100%;
+}
+header{
+    height: 10%;
+    background-color: rgb(255, 127, 200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    width: 20%;
+    height: 90%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    background-color: blue;
+}
+#addnote{
+    height: 10%;
+    width: 100%;
+    background-color: brown;
+    display: grid;
+    grid-template-columns:60% 40%;
+    gap:10px;
+}
+button.add{
+    background-color: aqua;
+    border-radius: 50%;
+    width: 35%;
+    height:75%;
+    margin:auto;
+}
+.addnote{
+    margin: auto;
+    font-size: 25px;
+    padding-right:50%;
+}
+aside{
+    overflow-y: auto;
+}
