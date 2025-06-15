@@ -1,0 +1,27 @@
+    <header>
+        <h1>Minhas Notas</h1>
+    </header>
+    <section id="tela">
+        <nav>
+            <form action="/NovaNota" method="get">
+                <div id="addnote">
+                            <button class="add" onclick="adicionar()">+</button>
+                            <p class="addnote">Add Note</p>
+                </div>
+            </form>
+            <aside id="history">
+        
+            </aside>
+        </nav>
+        <main>
+            <!-- Receber div .class = note das novas notas -->
+            {{#each nota}}
+                <div id="nota">
+                    <h2>{{titulo}}</h2>
+                    <p>{{texto}}</p>
+                    <button onclick="window.location.href=`http://localhost:8081/Nota/{{id}}`"></button>
+                    <button onclick="window.location.href='http://localhost:8081/delet/{{id}}'"></button>
+                </div>
+            {{/each}}
+        </main>
+    </section>

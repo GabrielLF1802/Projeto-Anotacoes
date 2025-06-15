@@ -9,6 +9,6 @@ const anotacao= sequelize.define('anotacoes',{
     conteudo: {type:Sequelize.TEXT}
 })
 
-anotacao.sync({force:true})
+//anotacao.sync({force:true})
 
 
