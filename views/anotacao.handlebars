@@ -16,12 +16,13 @@
         <main>
             <!-- Receber div .class = note das novas notas -->
             {{#each nota}}
-                <div id="nota">
+                <div id="nota" data-id="{{id}}">
                     <h2>{{titulo}}</h2>
                     <p>{{texto}}</p>
                     <button onclick="window.location.href=`http://localhost:8081/Nota/{{id}}`"></button>
-                    <button onclick="window.location.href='http://localhost:8081/delet/{{id}}'"></button>
+                    <button onclick="deletarAnotacao('{{id}}')">Apagar</button>
                 </div>
             {{/each}}
         </main>
     </section>
+    <script src="/functions.js"></script>

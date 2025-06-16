@@ -39,6 +39,37 @@ const anotacao= sequelize.define('anotacoes',{
 // '2025-06-11 14:30:00' -> exemplo válido de date-time -> pegar uma biblioteca date
 
 // ROTAS -----------------------------------
+/* async function deletarAnotacao(id){
+    try{
+        const anotac= await fetch (`/anotacao/${id}`,{
+            method: 'DELETE'
+        })
+        if (anotac.ok){
+            window.alert('Deletado com sucesso')
+        }else{
+            window.alert('Erro ao deletar a nota')
+        }
+}catch(erro){
+    window.alert(erro)
+}
+} */
+
+
+app.delete("/anotacao/:id", async(req,res)=>{
+    try{
+        const {id} = req.params
+        
+        const delet= await anotacao.destroy({where: {id}})
+        if (delet){
+            res.status(200).send('Deletado com sucesso')
+        }else{
+            res.status(404).send('Não encontrada')
+        }
+
+    }catch(erro){
+        res.status(500).send('Erro interno no server')
+    }
+})
 
 app.get("/NovaNota", function(req,res){
     res.render('nota')
@@ -56,13 +87,7 @@ app.get("/Nota/:id", async(req,res)=>{
         send(erro)
     }
 })
-app.get("/delet/:id", function(req,res){
-    anotacao.destroy({where:{'id':req.params.id}}).then(function(){
-        res.send('Nota Deletada com sucesso')
-    }).catch(function(){
-        res.send(erro)
-    })
-})
+
 
 
 app.get("/anotacao", function(req,res){
