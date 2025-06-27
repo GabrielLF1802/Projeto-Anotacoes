@@ -41,16 +41,12 @@ nav{
     display: grid;
     grid-template-columns: 20% auto;
 }
-button.add{
+.add{
     background-color: aqua;
     border-radius: 50%;
     width: 35%;
     height:75%;
     margin:auto;
-}
-button{
-    height: 15px;
-    width: 15px;
 }
 .addnote{
     margin: auto;
@@ -61,15 +57,33 @@ aside{
     overflow-y: auto;
 }
 
-/* Editar como cada nota irá aparecer: */
 
-#nota{
-    width: 10%;
-    height: 10%;
-    background-color: chartreuse;
-    margin: 20px;
-}
-#nota:hover{
+/* Mini Notas - Anotacao */
+
+#boxnote:hover{
     transform: scale(1.1);
 }
+#boxnote{
+    width: 150px;
+    height: 150px;
+    margin: 40px;
+}
+#nota{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: chartreuse;
 
+}
+.buttonsnote{
+    border-radius: 0;
+    width: 100%;
+    margin: 0;
+}
+.boxbuttonsnote{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;                 
+  width: 300px; 
+}

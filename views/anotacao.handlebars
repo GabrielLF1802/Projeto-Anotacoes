@@ -16,11 +16,15 @@
         <main>
             <!-- Receber div .class = note das novas notas -->
             {{#each nota}}
-                <div id="nota" data-id="{{id}}">
-                    <h2>{{titulo}}</h2>
-                    <p>{{texto}}</p>
-                    <button onclick="window.location.href=`http://localhost:8081/Nota/{{id}}`"></button>
-                    <button onclick="deletarAnotacao('{{id}}')">Apagar</button>
+                <div id="boxnote">
+                    <div id="nota" data-id="{{id}}">
+                        <h2>{{titulo}}</h2>
+                        <p>{{texto}}</p>
+                    </div>
+                    <div class="boxbottonsnote">
+                        <button onclick="window.location.href=`http://localhost:8081/Nota/{{id}}`" class="buttonsnote">Abrir</button>
+                        <button onclick="deletarAnotacao('{{id}}')" class="buttonsnote">Apagar</button>
+                    </div>
                 </div>
             {{/each}}
         </main>
