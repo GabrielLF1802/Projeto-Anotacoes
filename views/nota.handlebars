@@ -1,10 +1,15 @@
 <form action="/add" method="POST">
-    <h1>Titulo</h1>
-    <input type="text" name="titulo">
-    <p>Texto:</p>
-    <input type="text" name="texto">
+    <h1 id="titnota">Título</h1>
+    <div id="titdiv">
+        <input type="text" name="titulo" id="titinput" autocomplete="off">
+    </div>
+    <div id="textdiv">
+        <textarea name="texto" id="textinput" autocomplete="off" placeholder="Escreva Aqui..."></textarea>
+    </div>
     
     <br>
-    <button>Salvar</button>
+    <div id="boxbutton">
+        <button>Salvar</button>
+    </div>
 
 </form>
