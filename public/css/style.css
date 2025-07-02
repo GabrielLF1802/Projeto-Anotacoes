@@ -5,9 +5,13 @@
 body,html{
     height: 100%;
 }
+h1{
+    font-weight: 800;
+    color: #292929;
+}
 header{
     height: 10%;
-    background-color: rgb(255, 127, 200);
+    background-color: #D98E04;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,25 +20,29 @@ form{
     width: 100%;
     height: 100%;
 }
-main{
+main{/* Regiao que esta localizado as notas */
     padding-left: 5%;
+    overflow-y: auto;
 }
-nav{
+nav{ /* Barra lateral */
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: start;
     align-items: start;
-    background-color: blue;
+    background-color: #F2F2F2;
 }
-#addnote{
+#addnote{/* div do Botao '+' e 'Add note' */
     height: 10%;
     width: 100%;
-    background-color: brown;
+    background-color: #F2F2F2;
     display: grid;
     grid-template-columns:60% 40%;
     gap:10px;
+    border: solid 3px black;
+    border-radius: 10px;
 }
+/* Section */
 #tela{
     height: 90%;
     width: 100%;
@@ -42,14 +50,15 @@ nav{
     grid-template-columns: 20% auto;
 }
 
+/* Escrita ' Add note ' */
 .addnote{
     margin: auto;
     font-size: 25px;
+    font-weight: 800;
+    color: #292929;
     padding-right:50%;
 }
-aside{
-    overflow-y: auto;
-}
+
 
 
 /* Mini Notas - Anotacao */
@@ -59,14 +68,17 @@ aside{
 }
 .buttonsnote:hover{
     transform: scale(1.01);
-    background-color: aqua;
+    background-color: #F29F05;
 
 }
+/* Box de cada nota e a forma como aparece cada uma */
 #boxnote{
     width: 90%;
     height: 120px;
     margin-top: 30px;
-    background-color: chartreuse;
+    background-color: #D98E04;
+    border: solid 2px black;
+    box-shadow: black 3px 10px 10px;
 }
 #nota{
     width: 100%;
@@ -74,19 +86,48 @@ aside{
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
-    background-color: chartreuse;
+    background-color: #D98E04;
 
 }
-.buttonsnote{  /* Estilização do botão em si  */
+/* Estilização do botão 'Abrir' e 'Apagar '  */
+.buttonsnote{ 
     border-radius: 20px;
     width: 70%;
     height: 100%;
     box-shadow: black 2px 2px 2px;
-    background-color: chartreuse;
+    background-color: #D9CEAD;
 }
 .boxbottonsnote{
   display:flex;
   gap: 5px;
   height: 40%;
   margin-top: 15px;
+}
+/* Botão '+' */
+.add{
+    background-color: #F29F05;
+    border-radius: 50%;
+    width: 35%;
+    height:75%;
+    margin:auto;
+}
+.add:hover{
+    transform: scale(1.03);
+    background-color: #7bff00;
+}
+/* History Note */
+#historynote{
+    height: 10%;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    border: solid 2px black;
+    word-wrap: break-word;
+    overflow-wrap: break-word
+}
+#historybox{/* Box do histórico e overflow */
+    overflow-y: auto;
+    height: 90%;
 }

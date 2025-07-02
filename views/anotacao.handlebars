@@ -1,5 +1,5 @@
     <header>
-        <h1>Minhas Notas</h1>
+        <h1>My Notes</h1>
     </header>
     <section id="tela">
         <nav>
@@ -8,10 +8,17 @@
                             <button class="add" onclick="adicionar()">+</button>
                             <p class="addnote">Add Note</p>
                 </div>
-            </form>
-            <aside id="history">
+            <aside id="historybox">
+                {{!-- Histórico do título das notas adicionadas --}}
+                {{#each nota}}
+                    <div id="historynote">
+                        {{titulo}}
+                    </div>
+                {{/each}}
         
             </aside>
+            </form>
+
         </nav>
         <main>
             <!-- Receber div .class = note das novas notas -->
